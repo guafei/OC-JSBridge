@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		56ABB5431A11A63A001553A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56ABB5421A11A63A001553A7 /* main.m */; };
 		56ABB5461A11A63A001553A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56ABB5451A11A63A001553A7 /* AppDelegate.m */; };
-		56ABB5491A11A63A001553A7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56ABB5481A11A63A001553A7 /* ViewController.m */; };
 		56ABB54C1A11A63A001553A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56ABB54A1A11A63A001553A7 /* Main.storyboard */; };
 		56ABB54E1A11A63A001553A7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56ABB54D1A11A63A001553A7 /* Images.xcassets */; };
 		56ABB5511A11A63A001553A7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56ABB54F1A11A63A001553A7 /* LaunchScreen.xib */; };
 		56ABB55D1A11A63A001553A7 /* Js_Bridge_OCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56ABB55C1A11A63A001553A7 /* Js_Bridge_OCTests.m */; };
+		56ABB5691A11A708001553A7 /* CPURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 56ABB5681A11A708001553A7 /* CPURLProtocol.m */; };
+		56ABB56C1A11A739001553A7 /* CPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56ABB56B1A11A739001553A7 /* CPBaseViewController.m */; };
+		56ABB56F1A11A8D3001553A7 /* CPRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56ABB56E1A11A8D3001553A7 /* CPRootViewController.m */; };
+		56ABB5711A11AF31001553A7 /* Constants.h in Sources */ = {isa = PBXBuildFile; fileRef = 56ABB5701A11AE2D001553A7 /* Constants.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +35,19 @@
 		56ABB5421A11A63A001553A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		56ABB5441A11A63A001553A7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		56ABB5451A11A63A001553A7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		56ABB5471A11A63A001553A7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		56ABB5481A11A63A001553A7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		56ABB54B1A11A63A001553A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		56ABB54D1A11A63A001553A7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		56ABB5501A11A63A001553A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		56ABB5561A11A63A001553A7 /* Js_Bridge_OCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Js_Bridge_OCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		56ABB55B1A11A63A001553A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56ABB55C1A11A63A001553A7 /* Js_Bridge_OCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Js_Bridge_OCTests.m; sourceTree = "<group>"; };
+		56ABB5671A11A708001553A7 /* CPURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPURLProtocol.h; sourceTree = "<group>"; };
+		56ABB5681A11A708001553A7 /* CPURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPURLProtocol.m; sourceTree = "<group>"; };
+		56ABB56A1A11A739001553A7 /* CPBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPBaseViewController.h; sourceTree = "<group>"; };
+		56ABB56B1A11A739001553A7 /* CPBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPBaseViewController.m; sourceTree = "<group>"; };
+		56ABB56D1A11A8D3001553A7 /* CPRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPRootViewController.h; sourceTree = "<group>"; };
+		56ABB56E1A11A8D3001553A7 /* CPRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPRootViewController.m; sourceTree = "<group>"; };
+		56ABB5701A11AE2D001553A7 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +89,12 @@
 		56ABB53F1A11A63A001553A7 /* Js_Bridge_OC */ = {
 			isa = PBXGroup;
 			children = (
+				56ABB5661A11A658001553A7 /* JsBridge */,
+				56ABB5701A11AE2D001553A7 /* Constants.h */,
+				56ABB56D1A11A8D3001553A7 /* CPRootViewController.h */,
+				56ABB56E1A11A8D3001553A7 /* CPRootViewController.m */,
 				56ABB5441A11A63A001553A7 /* AppDelegate.h */,
 				56ABB5451A11A63A001553A7 /* AppDelegate.m */,
-				56ABB5471A11A63A001553A7 /* ViewController.h */,
-				56ABB5481A11A63A001553A7 /* ViewController.m */,
 				56ABB54A1A11A63A001553A7 /* Main.storyboard */,
 				56ABB54D1A11A63A001553A7 /* Images.xcassets */,
 				56ABB54F1A11A63A001553A7 /* LaunchScreen.xib */,
@@ -117,6 +127,17 @@
 				56ABB55B1A11A63A001553A7 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		56ABB5661A11A658001553A7 /* JsBridge */ = {
+			isa = PBXGroup;
+			children = (
+				56ABB5671A11A708001553A7 /* CPURLProtocol.h */,
+				56ABB5681A11A708001553A7 /* CPURLProtocol.m */,
+				56ABB56A1A11A739001553A7 /* CPBaseViewController.h */,
+				56ABB56B1A11A739001553A7 /* CPBaseViewController.m */,
+			);
+			path = JsBridge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,8 +240,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56ABB5491A11A63A001553A7 /* ViewController.m in Sources */,
+				56ABB5711A11AF31001553A7 /* Constants.h in Sources */,
+				56ABB56F1A11A8D3001553A7 /* CPRootViewController.m in Sources */,
 				56ABB5461A11A63A001553A7 /* AppDelegate.m in Sources */,
+				56ABB5691A11A708001553A7 /* CPURLProtocol.m in Sources */,
+				56ABB56C1A11A739001553A7 /* CPBaseViewController.m in Sources */,
 				56ABB5431A11A63A001553A7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

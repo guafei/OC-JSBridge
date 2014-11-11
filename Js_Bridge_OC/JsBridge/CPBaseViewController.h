@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CPBaseViewController : UIViewController
+@interface CPBaseViewController : UIViewController<UIWebViewDelegate>
+
+@property (nonatomic, strong) UIWebView  *webView;
 
 @end

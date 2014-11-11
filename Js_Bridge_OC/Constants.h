@@ -10,4 +10,8 @@
 #define Js_Bridge_OC_Constants_h
 
 
+#define CP_SCREEN_BOUNDS               [[UIScreen mainScreen] bounds]
+
+
+
 #endif

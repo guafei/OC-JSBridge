@@ -1,0 +1,69 @@
+<html>
+<head>
+</head>
+<body>
+	<button type="button" onclick = "sendRequest()">XHR Request!</button>
+	<button type="button" onclick = "sendIframeRequest()">iFrame Request!</button>
+	<input type="button" value="LocationRequest" onClick="sendDocumentRequest();" />   
+</body>
+<script type="text/javascript">
+	var xmlhttp;
+	function sendRequest() 
+	{
+		xmlhttp=null;
+		if (window.XMLHttpRequest)
+ 		{// code for all new browsers
+		  xmlhttp=new XMLHttpRequest();
+		}
+		else if (window.ActiveXObject)
+  		{// code for IE5 and IE6
+  			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  		}
+
+		if (xmlhttp!=null)
+  		{
+  			//url should be http://
+  			xmlhttp.onreadystatechange=state_Change;
+  			xmlhttp.open("GET","http://www.baidu.com",true);
+  			xmlhttp.send(null);
+   		}
+		else
+  		{
+  			alert("Your browser does not support XMLHTTP.");
+  		}
+	}
+
+	function state_Change()
+	{
+	if (xmlhttp.readyState==4)
+	  {	
+	  if (xmlhttp.status==200)
+	    {
+	    	alert("status code is 200")	
+	    }
+	  else
+	    {
+	    	alert("Problem retrieving XML data");
+	    }
+	  }
+	}
+
+	function sendIframeRequest () {
+		var iframe = document.createElement("iframe");
+        var url= "myapp:" + "&func=iFrameCall" ;
+        iframe.src = url;
+        iframe.style.display = 'none';
+        document.body.appendChild(iframe);
+        iframe.parentNode.removeChild(iFrame);
+        iframe = null;
+	}
+
+	function sendDocumentRequest () 
+	{
+		var url= "myapp:" + "&func=test";
+        document.location = url;
+	}
+
+</script>
+
+</html> 

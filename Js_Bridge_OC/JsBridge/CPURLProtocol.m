@@ -10,4 +10,12 @@
 
 @implementation CPURLProtocol
 
+
++ (BOOL)canInitWithRequest:(NSURLRequest *)request
+{
+    NSLog(@"canInitWithRequest is called and request is %@",request);
+    
+    return NO;
+}
+
 @end

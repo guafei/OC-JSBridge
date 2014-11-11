@@ -10,4 +10,23 @@
 
 @implementation CPRootViewController
 
+- (instancetype)init
+{
+    self = [super init];
+    if (!self) {
+        return nil;
+    }
+    
+    return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+//    NSURL *url = [NSURL URLWithString:@"http://127.0.0.1:8888/static.html"];
+//    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+//    [self.webView loadRequest:request];
+}
+
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "CPRootViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +17,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    CPRootViewController *rootVC = [[CPRootViewController alloc] init];
+    self.window.rootViewController = rootVC;
+    
     // Override point for customization after application launch.
     return YES;
 }
