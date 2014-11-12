@@ -12,7 +12,7 @@
 
 @implementation CPBaseViewController
 
-@synthesize webView=_webView;
+static UIWebView *webView;
 
 - (instancetype)init
 {
@@ -25,42 +25,71 @@
     return self;
 }
 
++ (UIWebView *)sharedSingletonWebView
+{
+    @synchronized(self)
+    {
+        if(!webView)
+        {
+            webView = [[UIWebView alloc] initWithFrame:CP_SCREEN_BOUNDS];
+        }
+        
+        return webView;
+    }
+}
+
 - (void)__init
 {
     [self.view setFrame:CP_SCREEN_BOUNDS];
-    self.webView = [[UIWebView alloc] initWithFrame:self.view.frame];
-    self.webView.delegate = self;
-    [self.view addSubview:_webView];
+    webView = [CPBaseViewController sharedSingletonWebView];
+    webView.delegate = self;
+    [self.view addSubview:webView];
     
     NSURL *url = [NSURL URLWithString:@"http://127.0.0.1:8888/static.html"];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
-    [self.webView loadRequest:request];
+    [webView loadRequest:request];
     
-    [NSURLProtocol registerClass:[CPURLProtocol class]];
+//    [NSURLProtocol registerClass:[CPURLProtocol class]];
+}
+
+- (NSString*)runJs:(NSString*)jsStr
+{
+    return [webView stringByEvaluatingJavaScriptFromString:jsStr];
+}
+
+- (void)dispatchRequest:(NSURLRequest *)request
+{
+    if ([[[request URL] scheme] hasPrefix:@"mailto"] || [[[request URL] scheme] hasPrefix:@"sms"] || [[[request URL] scheme] hasPrefix:@"tel"])
+    {
+        //do something
+    }
+    
+    if([[[request URL] scheme] hasPrefix:@"non-http"])
+    {
+        
+    }
 }
 
 #pragma mark UIWebViewDelegate
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
-    NSLog(@"request is %@",request);
-    
     return YES;
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {
-    NSLog(@"webViewDidStartLoad");
+    NSLog(@"CPBaseViewController webViewDidStartLoad");
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    NSLog(@"webViewDidFinishLoad");
+    NSLog(@"CPBaseViewController webViewDidFinishLoad");
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
-    NSLog(@"didFailLoadWithError");
+    NSLog(@"CPBaseViewController didFailLoadWithError");
 }
 
 

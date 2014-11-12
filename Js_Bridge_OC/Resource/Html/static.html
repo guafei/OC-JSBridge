@@ -4,7 +4,7 @@
 <body>
 	<button type="button" onclick = "sendRequest()">XHR Request!</button>
 	<button type="button" onclick = "sendIframeRequest()">iFrame Request!</button>
-	<input type="button" value="LocationRequest" onClick="sendDocumentRequest();" />   
+	<input type="button" value="LocationRequest" onClick="sendDocumentRequest()" />   
 </body>
 <script type="text/javascript">
 	var xmlhttp;
@@ -51,6 +51,7 @@
 	function sendIframeRequest () {
 		var iframe = document.createElement("iframe");
         var url= "myapp:" + "&func=iFrameCall" ;
+        url = "http://www.baidu.com";
         iframe.src = url;
         iframe.style.display = 'none';
         document.body.appendChild(iframe);
@@ -60,8 +61,13 @@
 
 	function sendDocumentRequest () 
 	{
-		var url= "myapp:" + "&func=test";
+		var url= "mailto:" + "&func=test";
         document.location = url;
+	}
+
+	function callbackAction ()
+	{
+		alert("callbackAction function called !");
 	}
 
 </script>

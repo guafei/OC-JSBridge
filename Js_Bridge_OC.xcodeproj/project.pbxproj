@@ -17,6 +17,7 @@
 		56ABB56C1A11A739001553A7 /* CPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56ABB56B1A11A739001553A7 /* CPBaseViewController.m */; };
 		56ABB56F1A11A8D3001553A7 /* CPRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56ABB56E1A11A8D3001553A7 /* CPRootViewController.m */; };
 		56ABB5711A11AF31001553A7 /* Constants.h in Sources */ = {isa = PBXBuildFile; fileRef = 56ABB5701A11AE2D001553A7 /* Constants.h */; };
+		56AF9CF81A12FE4800E13128 /* CPUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 56AF9CF71A12FE4800E13128 /* CPUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		56ABB56D1A11A8D3001553A7 /* CPRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPRootViewController.h; sourceTree = "<group>"; };
 		56ABB56E1A11A8D3001553A7 /* CPRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPRootViewController.m; sourceTree = "<group>"; };
 		56ABB5701A11AE2D001553A7 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		56AF9CF61A12FE4800E13128 /* CPUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPUtil.h; sourceTree = "<group>"; };
+		56AF9CF71A12FE4800E13128 /* CPUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +139,8 @@
 				56ABB5681A11A708001553A7 /* CPURLProtocol.m */,
 				56ABB56A1A11A739001553A7 /* CPBaseViewController.h */,
 				56ABB56B1A11A739001553A7 /* CPBaseViewController.m */,
+				56AF9CF61A12FE4800E13128 /* CPUtil.h */,
+				56AF9CF71A12FE4800E13128 /* CPUtil.m */,
 			);
 			path = JsBridge;
 			sourceTree = "<group>";
@@ -240,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56AF9CF81A12FE4800E13128 /* CPUtil.m in Sources */,
 				56ABB5711A11AF31001553A7 /* Constants.h in Sources */,
 				56ABB56F1A11A8D3001553A7 /* CPRootViewController.m in Sources */,
 				56ABB5461A11A63A001553A7 /* AppDelegate.m in Sources */,
@@ -436,6 +442,7 @@
 				56ABB5621A11A63A001553A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		56ABB5631A11A63A001553A7 /* Build configuration list for PBXNativeTarget "Js_Bridge_OCTests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +451,7 @@
 				56ABB5651A11A63A001553A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

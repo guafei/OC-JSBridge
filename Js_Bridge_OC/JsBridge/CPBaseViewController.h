@@ -10,6 +10,8 @@
 
 @interface CPBaseViewController : UIViewController<UIWebViewDelegate>
 
-@property (nonatomic, strong) UIWebView  *webView;
++ (UIWebView *)sharedSingletonWebView;
+
+- (NSString*)runJs:(NSString*)jsStr;
 
 @end

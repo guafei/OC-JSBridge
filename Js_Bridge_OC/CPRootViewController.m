@@ -23,10 +23,33 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+}
+
+#pragma mark UIWebViewDelegate
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    //all request from h5 will call this function ,except xhr
+    BOOL shouldLoad = [super webView:webView shouldStartLoadWithRequest:request navigationType:navigationType];
     
-//    NSURL *url = [NSURL URLWithString:@"http://127.0.0.1:8888/static.html"];
-//    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
-//    [self.webView loadRequest:request];
+    return shouldLoad;
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+    NSLog(@"webViewDidStartLoad");
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    NSLog(@"webViewDidFinishLoad");
+    [self runJs:@"callbackAction();"];
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    NSLog(@"didFailLoadWithError");
+    [self runJs:@"callbackAction();"];
 }
 
 @end
