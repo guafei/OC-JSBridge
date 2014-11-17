@@ -10,7 +10,9 @@
 
 @interface CPUtil : NSObject
 
++(NSString *)getClassName:(NSString *)data;
 
++(NSDictionary *)dataMapToDic:(NSString *)data;
 
 @end
 

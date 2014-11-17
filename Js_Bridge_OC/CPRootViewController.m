@@ -23,6 +23,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //init root webview
+    UIWebView *webView = [CPBaseViewController sharedSingletonWebView];
+    NSURL *url = [NSURL URLWithString:@"http://127.0.0.1:8888/static.html"];
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+    [webView loadRequest:request];
 }
 
 #pragma mark UIWebViewDelegate
@@ -43,13 +49,13 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     NSLog(@"webViewDidFinishLoad");
-    [self runJs:@"callbackAction();"];
+//    [self runJs:@"callbackAction();"];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
     NSLog(@"didFailLoadWithError");
-    [self runJs:@"callbackAction();"];
+//    [self runJs:@"callbackAction();"];
 }
 
 @end

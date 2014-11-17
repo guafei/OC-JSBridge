@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		560528F91A18B0D700342E9F /* static.html in Resources */ = {isa = PBXBuildFile; fileRef = 560528F81A18B0D700342E9F /* static.html */; };
+		560528FC1A18D21F00342E9F /* CPBasePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 560528FB1A18D21F00342E9F /* CPBasePlugin.m */; };
+		560529051A18D37A00342E9F /* CPCameraPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 560529041A18D37A00342E9F /* CPCameraPlugin.m */; };
 		56ABB5431A11A63A001553A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56ABB5421A11A63A001553A7 /* main.m */; };
 		56ABB5461A11A63A001553A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56ABB5451A11A63A001553A7 /* AppDelegate.m */; };
 		56ABB54C1A11A63A001553A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56ABB54A1A11A63A001553A7 /* Main.storyboard */; };
@@ -31,6 +34,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		560528F81A18B0D700342E9F /* static.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = static.html; sourceTree = "<group>"; };
+		560528FA1A18D21F00342E9F /* CPBasePlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPBasePlugin.h; sourceTree = "<group>"; };
+		560528FB1A18D21F00342E9F /* CPBasePlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPBasePlugin.m; sourceTree = "<group>"; };
+		560529031A18D37A00342E9F /* CPCameraPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPCameraPlugin.h; sourceTree = "<group>"; };
+		560529041A18D37A00342E9F /* CPCameraPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPCameraPlugin.m; sourceTree = "<group>"; };
 		56ABB53D1A11A63A001553A7 /* Js_Bridge_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Js_Bridge_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56ABB5411A11A63A001553A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56ABB5421A11A63A001553A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -71,6 +79,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		560528F61A18B0D600342E9F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				560528F71A18B0D600342E9F /* Html */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		560528F71A18B0D600342E9F /* Html */ = {
+			isa = PBXGroup;
+			children = (
+				560528F81A18B0D700342E9F /* static.html */,
+			);
+			path = Html;
+			sourceTree = "<group>";
+		};
+		560529021A18D36A00342E9F /* Plugin */ = {
+			isa = PBXGroup;
+			children = (
+				560529031A18D37A00342E9F /* CPCameraPlugin.h */,
+				560529041A18D37A00342E9F /* CPCameraPlugin.m */,
+			);
+			path = Plugin;
+			sourceTree = "<group>";
+		};
 		56ABB5341A11A63A001553A7 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +125,7 @@
 		56ABB53F1A11A63A001553A7 /* Js_Bridge_OC */ = {
 			isa = PBXGroup;
 			children = (
+				560528F61A18B0D600342E9F /* Resource */,
 				56ABB5661A11A658001553A7 /* JsBridge */,
 				56ABB5701A11AE2D001553A7 /* Constants.h */,
 				56ABB56D1A11A8D3001553A7 /* CPRootViewController.h */,
@@ -135,12 +169,15 @@
 		56ABB5661A11A658001553A7 /* JsBridge */ = {
 			isa = PBXGroup;
 			children = (
+				560529021A18D36A00342E9F /* Plugin */,
 				56ABB5671A11A708001553A7 /* CPURLProtocol.h */,
 				56ABB5681A11A708001553A7 /* CPURLProtocol.m */,
 				56ABB56A1A11A739001553A7 /* CPBaseViewController.h */,
 				56ABB56B1A11A739001553A7 /* CPBaseViewController.m */,
 				56AF9CF61A12FE4800E13128 /* CPUtil.h */,
 				56AF9CF71A12FE4800E13128 /* CPUtil.m */,
+				560528FA1A18D21F00342E9F /* CPBasePlugin.h */,
+				560528FB1A18D21F00342E9F /* CPBasePlugin.m */,
 			);
 			path = JsBridge;
 			sourceTree = "<group>";
@@ -194,6 +231,7 @@
 				TargetAttributes = {
 					56ABB53C1A11A63A001553A7 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 52Z2K93TAE;
 					};
 					56ABB5551A11A63A001553A7 = {
 						CreatedOnToolsVersion = 6.1;
@@ -227,6 +265,7 @@
 			files = (
 				56ABB54C1A11A63A001553A7 /* Main.storyboard in Resources */,
 				56ABB5511A11A63A001553A7 /* LaunchScreen.xib in Resources */,
+				560528F91A18B0D700342E9F /* static.html in Resources */,
 				56ABB54E1A11A63A001553A7 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,10 +286,12 @@
 			files = (
 				56AF9CF81A12FE4800E13128 /* CPUtil.m in Sources */,
 				56ABB5711A11AF31001553A7 /* Constants.h in Sources */,
+				560529051A18D37A00342E9F /* CPCameraPlugin.m in Sources */,
 				56ABB56F1A11A8D3001553A7 /* CPRootViewController.m in Sources */,
 				56ABB5461A11A63A001553A7 /* AppDelegate.m in Sources */,
 				56ABB5691A11A708001553A7 /* CPURLProtocol.m in Sources */,
 				56ABB56C1A11A739001553A7 /* CPBaseViewController.m in Sources */,
+				560528FC1A18D21F00342E9F /* CPBasePlugin.m in Sources */,
 				56ABB5431A11A63A001553A7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,6 +351,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -330,6 +372,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "3fbfd122-5bac-4c62-82c6-0a4cd2c70917";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -364,6 +407,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "3fbfd122-5bac-4c62-82c6-0a4cd2c70917";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -373,9 +417,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Js_Bridge_OC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -383,9 +430,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Js_Bridge_OC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -9,6 +9,8 @@
 #import "CPBaseViewController.h"
 #import "Constants.h"
 #import "CPURLProtocol.h"
+#import "CPUtil.h"
+#import "CPBasePlugin.h"
 
 @implementation CPBaseViewController
 
@@ -45,10 +47,6 @@ static UIWebView *webView;
     webView.delegate = self;
     [self.view addSubview:webView];
     
-    NSURL *url = [NSURL URLWithString:@"http://127.0.0.1:8888/static.html"];
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
-    [webView loadRequest:request];
-    
 //    [NSURLProtocol registerClass:[CPURLProtocol class]];
 }
 
@@ -74,7 +72,18 @@ static UIWebView *webView;
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
-    return YES;
+    if([[[request URL] scheme] hasPrefix:@"cpcall"])
+    {
+        Class PluginClass = NSClassFromString([CPUtil getClassName:[request URL].absoluteString]);
+//        PluginClass *plugin = [[PluginClass alloc] initPluginWithParameters:[CPUtil dataMapToDic:[request URL].absoluteString]];
+        
+        return YES;
+    }else
+    {
+        //first time request call need to open it
+        return YES;
+    }
+    
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView

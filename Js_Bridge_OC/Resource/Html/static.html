@@ -5,6 +5,8 @@
 	<button type="button" onclick = "sendRequest()">XHR Request!</button>
 	<button type="button" onclick = "sendIframeRequest()">iFrame Request!</button>
 	<input type="button" value="LocationRequest" onClick="sendDocumentRequest()" />   
+
+	<a href="http://www.baidu.com">go to baidu !</a>
 </body>
 <script type="text/javascript">
 	var xmlhttp;
@@ -61,7 +63,7 @@
 
 	function sendDocumentRequest () 
 	{
-		var url= "mailto:" + "&func=test";
+		var url= "cpcall:" + "&class=CPCamera&parameters=camera";
         document.location = url;
 	}
 
