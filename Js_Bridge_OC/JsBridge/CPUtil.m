@@ -15,6 +15,16 @@
     return [[self commonMapToDic:data] objectForKey:@"class"];
 }
 
++ (NSString *)getPluginClassName:(NSString *)data
+{
+    return [[CPUtil getClassName:data] stringByAppendingString:@"Plugin"];
+}
+
++ (NSString *)getPluginViewControllerClassName:(NSString *)data
+{
+    return [[CPUtil getClassName:data] stringByAppendingString:@"ViewController"];
+}
+
 //cpcall:&class=CPCamera&parameters=camera
 +(NSDictionary *)dataMapToDic:(NSString *)data
 {
@@ -36,6 +46,17 @@
     }
     
     return dic;
+}
+
++ (NSString*)pathForResource:(NSString*)resourcepath
+{
+//    NSBundle* mainBundle = [NSBundle mainBundle];
+//    NSMutableArray* directoryParts = [NSMutableArray arrayWithArray:[resourcepath componentsSeparatedByString:@"/"]];
+//    NSString* filename = [directoryParts lastObject];
+//    
+//    [directoryParts removeLastObject];
+    
+    return nil;
 }
 
 @end

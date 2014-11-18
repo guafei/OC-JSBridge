@@ -75,12 +75,14 @@ static UIWebView *webView;
     if([[[request URL] scheme] hasPrefix:@"cpcall"])
     {
         Class PluginClass = NSClassFromString([CPUtil getClassName:[request URL].absoluteString]);
-//        PluginClass *plugin = [[PluginClass alloc] initPluginWithParameters:[CPUtil dataMapToDic:[request URL].absoluteString]];
+        
+        id plugin = [[PluginClass alloc] initPluginWithParameters:[CPUtil dataMapToDic:[request URL].absoluteString] withDelegate:self];
+        if([plugin respondsToSelector:@selector(excute)])
+            [plugin excute];
         
         return YES;
     }else
     {
-        //first time request call need to open it
         return YES;
     }
     

@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		560528F91A18B0D700342E9F /* static.html in Resources */ = {isa = PBXBuildFile; fileRef = 560528F81A18B0D700342E9F /* static.html */; };
 		560528FC1A18D21F00342E9F /* CPBasePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 560528FB1A18D21F00342E9F /* CPBasePlugin.m */; };
-		560529051A18D37A00342E9F /* CPCameraPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 560529041A18D37A00342E9F /* CPCameraPlugin.m */; };
+		560529241A1A40E200342E9F /* Resource in Resources */ = {isa = PBXBuildFile; fileRef = 560529231A1A40E200342E9F /* Resource */; };
+		560529371A1B8AFD00342E9F /* CPCameraPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 560529331A1B8AFD00342E9F /* CPCameraPlugin.m */; };
+		5605293B1A1B96A200342E9F /* CPImessagePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 5605293A1A1B96A200342E9F /* CPImessagePlugin.m */; };
 		56ABB5431A11A63A001553A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56ABB5421A11A63A001553A7 /* main.m */; };
 		56ABB5461A11A63A001553A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56ABB5451A11A63A001553A7 /* AppDelegate.m */; };
 		56ABB54C1A11A63A001553A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56ABB54A1A11A63A001553A7 /* Main.storyboard */; };
@@ -34,11 +35,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		560528F81A18B0D700342E9F /* static.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = static.html; sourceTree = "<group>"; };
 		560528FA1A18D21F00342E9F /* CPBasePlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPBasePlugin.h; sourceTree = "<group>"; };
 		560528FB1A18D21F00342E9F /* CPBasePlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPBasePlugin.m; sourceTree = "<group>"; };
-		560529031A18D37A00342E9F /* CPCameraPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPCameraPlugin.h; sourceTree = "<group>"; };
-		560529041A18D37A00342E9F /* CPCameraPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPCameraPlugin.m; sourceTree = "<group>"; };
+		560529231A1A40E200342E9F /* Resource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resource; sourceTree = "<group>"; };
+		560529321A1B8AFD00342E9F /* CPCameraPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPCameraPlugin.h; sourceTree = "<group>"; };
+		560529331A1B8AFD00342E9F /* CPCameraPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPCameraPlugin.m; sourceTree = "<group>"; };
+		560529391A1B96A200342E9F /* CPImessagePlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPImessagePlugin.h; sourceTree = "<group>"; };
+		5605293A1A1B96A200342E9F /* CPImessagePlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPImessagePlugin.m; sourceTree = "<group>"; };
 		56ABB53D1A11A63A001553A7 /* Js_Bridge_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Js_Bridge_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56ABB5411A11A63A001553A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56ABB5421A11A63A001553A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -79,34 +82,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		560528F61A18B0D600342E9F /* Resource */ = {
+		560529311A1B8AFD00342E9F /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				560528F71A18B0D600342E9F /* Html */,
+				560529321A1B8AFD00342E9F /* CPCameraPlugin.h */,
+				560529331A1B8AFD00342E9F /* CPCameraPlugin.m */,
+				560529391A1B96A200342E9F /* CPImessagePlugin.h */,
+				5605293A1A1B96A200342E9F /* CPImessagePlugin.m */,
 			);
-			path = Resource;
-			sourceTree = "<group>";
-		};
-		560528F71A18B0D600342E9F /* Html */ = {
-			isa = PBXGroup;
-			children = (
-				560528F81A18B0D700342E9F /* static.html */,
-			);
-			path = Html;
-			sourceTree = "<group>";
-		};
-		560529021A18D36A00342E9F /* Plugin */ = {
-			isa = PBXGroup;
-			children = (
-				560529031A18D37A00342E9F /* CPCameraPlugin.h */,
-				560529041A18D37A00342E9F /* CPCameraPlugin.m */,
-			);
-			path = Plugin;
+			path = Plugins;
 			sourceTree = "<group>";
 		};
 		56ABB5341A11A63A001553A7 = {
 			isa = PBXGroup;
 			children = (
+				560529231A1A40E200342E9F /* Resource */,
 				56ABB53F1A11A63A001553A7 /* Js_Bridge_OC */,
 				56ABB5591A11A63A001553A7 /* Js_Bridge_OCTests */,
 				56ABB53E1A11A63A001553A7 /* Products */,
@@ -125,7 +115,6 @@
 		56ABB53F1A11A63A001553A7 /* Js_Bridge_OC */ = {
 			isa = PBXGroup;
 			children = (
-				560528F61A18B0D600342E9F /* Resource */,
 				56ABB5661A11A658001553A7 /* JsBridge */,
 				56ABB5701A11AE2D001553A7 /* Constants.h */,
 				56ABB56D1A11A8D3001553A7 /* CPRootViewController.h */,
@@ -169,7 +158,7 @@
 		56ABB5661A11A658001553A7 /* JsBridge */ = {
 			isa = PBXGroup;
 			children = (
-				560529021A18D36A00342E9F /* Plugin */,
+				560529311A1B8AFD00342E9F /* Plugins */,
 				56ABB5671A11A708001553A7 /* CPURLProtocol.h */,
 				56ABB5681A11A708001553A7 /* CPURLProtocol.m */,
 				56ABB56A1A11A739001553A7 /* CPBaseViewController.h */,
@@ -263,9 +252,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				560529241A1A40E200342E9F /* Resource in Resources */,
 				56ABB54C1A11A63A001553A7 /* Main.storyboard in Resources */,
 				56ABB5511A11A63A001553A7 /* LaunchScreen.xib in Resources */,
-				560528F91A18B0D700342E9F /* static.html in Resources */,
 				56ABB54E1A11A63A001553A7 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,13 +275,14 @@
 			files = (
 				56AF9CF81A12FE4800E13128 /* CPUtil.m in Sources */,
 				56ABB5711A11AF31001553A7 /* Constants.h in Sources */,
-				560529051A18D37A00342E9F /* CPCameraPlugin.m in Sources */,
+				560529371A1B8AFD00342E9F /* CPCameraPlugin.m in Sources */,
 				56ABB56F1A11A8D3001553A7 /* CPRootViewController.m in Sources */,
 				56ABB5461A11A63A001553A7 /* AppDelegate.m in Sources */,
 				56ABB5691A11A708001553A7 /* CPURLProtocol.m in Sources */,
 				56ABB56C1A11A739001553A7 /* CPBaseViewController.m in Sources */,
 				560528FC1A18D21F00342E9F /* CPBasePlugin.m in Sources */,
 				56ABB5431A11A63A001553A7 /* main.m in Sources */,
+				5605293B1A1B96A200342E9F /* CPImessagePlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,7 +341,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 国飞 王 (U826C665V9)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -394,6 +384,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: 国飞 王 (U826C665V9)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -417,12 +408,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 国飞 王 (U826C665V9)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Js_Bridge_OC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "3fbfd122-5bac-4c62-82c6-0a4cd2c70917";
 			};
 			name = Debug;
 		};
@@ -430,12 +421,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 国飞 王 (U826C665V9)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Js_Bridge_OC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "3fbfd122-5bac-4c62-82c6-0a4cd2c70917";
 			};
 			name = Release;
 		};

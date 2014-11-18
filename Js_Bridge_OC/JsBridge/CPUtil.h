@@ -10,9 +10,15 @@
 
 @interface CPUtil : NSObject
 
-+(NSString *)getClassName:(NSString *)data;
++ (NSString *)getClassName:(NSString *)data;
 
-+(NSDictionary *)dataMapToDic:(NSString *)data;
++ (NSString *)getPluginClassName:(NSString *)data;
+
++ (NSString *)getPluginViewControllerClassName:(NSString *)data;
+
++ (NSDictionary *)dataMapToDic:(NSString *)data;
+
++ (NSString*)pathForResource:(NSString*)resourcepath;
 
 @end
 

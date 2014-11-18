@@ -2,11 +2,11 @@
 <head>
 </head>
 <body>
-	<button type="button" onclick = "sendRequest()">XHR Request!</button>
-	<button type="button" onclick = "sendIframeRequest()">iFrame Request!</button>
-	<input type="button" value="LocationRequest" onClick="sendDocumentRequest()" />   
+<!--	<button type="button" onclick = "sendRequest()">XHR Request!</button>-->
+<!--	<button type="button" onclick = "sendIframeRequest()">iFrame Request!</button>-->
+	<input type="button" value="Camera" onClick="sendDocumentRequest()" style="width:200px;height:100px;margin-top:100px;margin-left:50px;"/>
 
-	<a href="http://www.baidu.com">go to baidu !</a>
+<!--	<a href="http://www.baidu.com">go to baidu !</a>-->
 </body>
 <script type="text/javascript">
 	var xmlhttp;
@@ -63,7 +63,7 @@
 
 	function sendDocumentRequest () 
 	{
-		var url= "cpcall:" + "&class=CPCamera&parameters=camera";
+		var url= "cpcall:" + "&class=CPCameraPlugin&parameters=camera";
         document.location = url;
 	}
 

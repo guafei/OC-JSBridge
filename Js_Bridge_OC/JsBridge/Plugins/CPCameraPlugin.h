@@ -10,4 +10,6 @@
 
 @interface CPCameraPlugin : CPBasePlugin
 
+@property (nonatomic, strong) UIImagePickerController *imagePickerController;
+
 @end

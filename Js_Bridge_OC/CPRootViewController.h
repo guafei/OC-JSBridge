@@ -8,6 +8,6 @@
 
 #import "CPBaseViewController.h"
 
-@interface CPRootViewController : CPBaseViewController
+@interface CPRootViewController : CPBaseViewController <UIImagePickerControllerDelegate>
 
 @end

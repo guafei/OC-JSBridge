@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface CPBasePlugin : NSObject
 
-- (instancetype)initPluginWithParameters:(NSDictionary *) parameters;
+@property (nonatomic)         id            delegate;
+
+- (instancetype)initPluginWithParameters:(NSDictionary *) parameters withDelegate:(id)delegate;
 
 - (void)excute;
 

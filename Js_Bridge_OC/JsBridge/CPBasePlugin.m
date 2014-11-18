@@ -18,7 +18,7 @@
 
 @synthesize parameters=_parameters;
 
-- (instancetype)initPluginWithParameters:(NSDictionary *) parameters
+- (instancetype)initPluginWithParameters:(NSDictionary *) parameters withDelegate:(id)delegate
 {
     self = [super init];
     if (!self) {
@@ -26,6 +26,8 @@
     }
     
     self.parameters = parameters;
+    self.delegate = delegate;
+    
     [self __init];
     return self;
 }
@@ -37,7 +39,7 @@
 
 - (void)__init
 {
-    
+    NSLog(@"super init");
 }
 
 @end

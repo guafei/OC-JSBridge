@@ -26,8 +26,9 @@
     
     //init root webview
     UIWebView *webView = [CPBaseViewController sharedSingletonWebView];
-    NSURL *url = [NSURL URLWithString:@"http://127.0.0.1:8888/static.html"];
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+    NSString *resourcePath = [[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Resource/Html"] stringByAppendingPathComponent:@"static.html"];
+    NSURL *requestUrl = [NSURL fileURLWithPath:[resourcePath stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:requestUrl];
     [webView loadRequest:request];
 }
 
@@ -57,5 +58,14 @@
     NSLog(@"didFailLoadWithError");
 //    [self runJs:@"callbackAction();"];
 }
+
+#pragma mark
+#pragma UIImagePickerControllerDelegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    
+}
+
 
 @end
