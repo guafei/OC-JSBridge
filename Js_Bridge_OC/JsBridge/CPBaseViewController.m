@@ -85,7 +85,6 @@ static UIWebView *webView;
     {
         return YES;
     }
-    
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView

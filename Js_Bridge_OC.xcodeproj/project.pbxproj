@@ -11,6 +11,8 @@
 		560529241A1A40E200342E9F /* Resource in Resources */ = {isa = PBXBuildFile; fileRef = 560529231A1A40E200342E9F /* Resource */; };
 		560529371A1B8AFD00342E9F /* CPCameraPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 560529331A1B8AFD00342E9F /* CPCameraPlugin.m */; };
 		5605293B1A1B96A200342E9F /* CPImessagePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 5605293A1A1B96A200342E9F /* CPImessagePlugin.m */; };
+		5640F4C81A43BB0800AECE0B /* ObjectWithJsCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 5640F4C71A43BB0800AECE0B /* ObjectWithJsCore.m */; };
+		5640F4D91A4414F000AECE0B /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5640F4D81A4414F000AECE0B /* JavaScriptCore.framework */; };
 		56ABB5431A11A63A001553A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 56ABB5421A11A63A001553A7 /* main.m */; };
 		56ABB5461A11A63A001553A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 56ABB5451A11A63A001553A7 /* AppDelegate.m */; };
 		56ABB54C1A11A63A001553A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56ABB54A1A11A63A001553A7 /* Main.storyboard */; };
@@ -42,6 +44,9 @@
 		560529331A1B8AFD00342E9F /* CPCameraPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPCameraPlugin.m; sourceTree = "<group>"; };
 		560529391A1B96A200342E9F /* CPImessagePlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPImessagePlugin.h; sourceTree = "<group>"; };
 		5605293A1A1B96A200342E9F /* CPImessagePlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPImessagePlugin.m; sourceTree = "<group>"; };
+		5640F4C61A43BB0800AECE0B /* ObjectWithJsCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectWithJsCore.h; sourceTree = "<group>"; };
+		5640F4C71A43BB0800AECE0B /* ObjectWithJsCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectWithJsCore.m; sourceTree = "<group>"; };
+		5640F4D81A4414F000AECE0B /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		56ABB53D1A11A63A001553A7 /* Js_Bridge_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Js_Bridge_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56ABB5411A11A63A001553A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56ABB5421A11A63A001553A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -69,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5640F4D91A4414F000AECE0B /* JavaScriptCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,9 +99,19 @@
 			path = Plugins;
 			sourceTree = "<group>";
 		};
+		5640F4C51A43BADB00AECE0B /* JSCore */ = {
+			isa = PBXGroup;
+			children = (
+				5640F4C61A43BB0800AECE0B /* ObjectWithJsCore.h */,
+				5640F4C71A43BB0800AECE0B /* ObjectWithJsCore.m */,
+			);
+			path = JSCore;
+			sourceTree = "<group>";
+		};
 		56ABB5341A11A63A001553A7 = {
 			isa = PBXGroup;
 			children = (
+				5640F4D81A4414F000AECE0B /* JavaScriptCore.framework */,
 				560529231A1A40E200342E9F /* Resource */,
 				56ABB53F1A11A63A001553A7 /* Js_Bridge_OC */,
 				56ABB5591A11A63A001553A7 /* Js_Bridge_OCTests */,
@@ -115,6 +131,7 @@
 		56ABB53F1A11A63A001553A7 /* Js_Bridge_OC */ = {
 			isa = PBXGroup;
 			children = (
+				5640F4C51A43BADB00AECE0B /* JSCore */,
 				56ABB5661A11A658001553A7 /* JsBridge */,
 				56ABB5701A11AE2D001553A7 /* Constants.h */,
 				56ABB56D1A11A8D3001553A7 /* CPRootViewController.h */,
@@ -283,6 +300,7 @@
 				560528FC1A18D21F00342E9F /* CPBasePlugin.m in Sources */,
 				56ABB5431A11A63A001553A7 /* main.m in Sources */,
 				5605293B1A1B96A200342E9F /* CPImessagePlugin.m in Sources */,
+				5640F4C81A43BB0800AECE0B /* ObjectWithJsCore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
